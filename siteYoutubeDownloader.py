@@ -8,8 +8,7 @@ def main():
 	option = st.selectbox(
      'Select type of download',
      ('audio', 'highest_resolution', 'lowest_resolution'))
-	caminho = st.path.join(st.path.expanduser('~'), 'downloads')
-	SAVE_PATH = st.text_input("Save path", value=caminho, key="save_path")
+	SAVE_PATH = st.text_input("Save path", value="\dowloads", key="save_path")
 	matches = ['audio', 'highest_resolution', 'lowest_resolution']
 	if st.button("download"): 
 		video_object =  YouTube(path)
