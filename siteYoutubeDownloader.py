@@ -13,7 +13,7 @@ def start_download(yt_link, save_path):
         original_path = os.path.join(save_path, filename)
         new_path = os.path.join(save_path, yt_object.title + '.' + filename.split('.')[-1])
         shutil.move(original_path, new_path)
-        st.success("Download concluído!")
+        st.success(f"Download concluído! Arquivo salvo em: {new_path}")
     except Exception as e:
         st.error(f"Erro: {str(e)}")
 
